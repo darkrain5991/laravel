@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        body 
+        {
+        font-size: 20px;
+	    width :100%;
+	    height: 100%;
+	    background-image:url("../resources/image/bac.jpg");
+	    background-size: cover;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <!-- 換前端 -->
+     <div id="demo"></div>   
+     <div id="words"></div>
+<!--  -->
+
+
+    <script>
+        function init() {
+            var myUrl = "showinit.php";
+            $.ajax({
+                url: myUrl,
+                type: 'POST',
+                async: true,
+                dataType: 'json',
+                /* 函式中的 backData 參數：伺服器回傳的查詢結果 */
+                /* 在此範例中，僅查詢特定的資料，其查詢條件寫在後端 php 程式碼之中 */
+                success: function (backData, jqXHR) {   /* 後端 php 成功執行 */
+                    if (backData == "null") {   /* 後端 php 沒有查詢到任何資料 */
+                        document.getElementById('demo').innerHTML = "找不到資料!";
+                    } else {    /* 後端 php 有查詢到某些資料 */
+                        console.log(backData);
+                        for (var i = 0; i < backData.length; i++) {
+                            var firstData = backData[i];
+                            $("#words").append(firstData['nick']+":");
+                            $("#words").append(firstData['words']);
+                            $("#words").append("<br>");
+                        }
+                    }
+                },
+                error: function (textStatus) {  /* 後端 php 執行失敗 */
+                    document.getElementById('demo').innerHTML = "沒有資料";
+                }
+            });
+            function myrefresh() {
+                window.parent.mainFrame.location.reload();
+            }
+
+        } 
+    </script>
+</body>
+
+</html>

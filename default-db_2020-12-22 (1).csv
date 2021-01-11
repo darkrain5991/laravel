@@ -1,0 +1,18 @@
+&quot;id&quot;,&quot;uuid&quot;,&quot;connection&quot;,&quot;queue&quot;,&quot;payload&quot;,&quot;exception&quot;,&quot;failed_at&quot;
+&quot;id&quot;,&quot;migration&quot;,&quot;batch&quot;
+&quot;1&quot;,&quot;2014_10_12_000000_create_users_table&quot;,&quot;1&quot;
+&quot;2&quot;,&quot;2014_10_12_100000_create_password_resets_table&quot;,&quot;1&quot;
+&quot;3&quot;,&quot;2019_08_19_000000_create_failed_jobs_table&quot;,&quot;1&quot;
+&quot;4&quot;,&quot;2020_12_01_055831_create_quotes_table&quot;,&quot;1&quot;
+&quot;5&quot;,&quot;2020_12_01_063349_create_posts_table&quot;,&quot;1&quot;
+&quot;6&quot;,&quot;2020_12_01_064505_create_subjects_table&quot;,&quot;1&quot;
+&quot;7&quot;,&quot;2020_12_08_055659_add_subject_id_to_posts_table&quot;,&quot;1&quot;
+&quot;8&quot;,&quot;2020_12_08_075350_add_user_id_to_posts_table&quot;,&quot;1&quot;
+&quot;9&quot;,&quot;2020_12_15_074800_add_soft_delete_to_posts_table&quot;,&quot;1&quot;
+&quot;email&quot;,&quot;token&quot;,&quot;created_at&quot;
+&quot;id&quot;,&quot;content&quot;,&quot;user_id&quot;,&quot;subject_id&quot;,&quot;created_at&quot;,&quot;updated_at&quot;,&quot;deleted_at&quot;
+&quot;1&quot;,&quot;第一篇文章&quot;,&quot;1&quot;,&quot;0&quot;,&quot;2020-12-22 06:32:38&quot;,&quot;2020-12-22 06:32:38&quot;,NULL
+&quot;id&quot;,&quot;content&quot;,&quot;created_at&quot;,&quot;updated_at&quot;
+&quot;id&quot;,&quot;name&quot;,&quot;created_at&quot;,&quot;updated_at&quot;
+&quot;id&quot;,&quot;name&quot;,&quot;email&quot;,&quot;email_verified_at&quot;,&quot;password&quot;,&quot;remember_token&quot;,&quot;created_at&quot;,&quot;updated_at&quot;
+&quot;1&quot;,&quot;cflin&quot;,&quot;cflin@mail.cjcu.edu.tw&quot;,NULL,&quot;$2y$10$9LU0y7ntqUca87jCqQQzpu2PgRSY5LmjZWdvJuKgvjepp6IC7bhlq&quot;,NULL,&quot;2020-12-22 06:29:32&quot;,&quot;2020-12-22 06:29:32&quot;
